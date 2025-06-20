@@ -3,7 +3,7 @@ Collecting workspace information# Algorithmic Trading Research Platform
 
 A comprehensive research platform for algorithmic trading using reinforcement learning and classical machine learning methods, with advanced wavelet-based signal denoising and feature extraction.
 
-## 🚀 Overview
+## Overview
 
 This research platform implements and compares multiple algorithmic trading approaches:
 - **Reinforcement Learning**: PPO, A2C, DQN with advanced neural architectures
@@ -11,7 +11,7 @@ This research platform implements and compares multiple algorithmic trading appr
 - **Baseline Strategies**: Buy & Hold, Moving Average Crossover
 - **Signal Processing**: Multi-wavelet denoising with effectiveness analysis
 
-## 📊 Key Features
+## Key Features
 
 ### Advanced Signal Processing
 - **Multi-wavelet Families**: Daubechies, Symlets, Coiflets, Biorthogonal
@@ -37,7 +37,7 @@ This research platform implements and compares multiple algorithmic trading appr
 - **Position Management**: Proper entry/exit mechanics
 - **Performance Tracking**: Real-time balance and trade monitoring
 
-## 🔧 Configuration
+## Configuration
 
 ### Hyperparameter Grid
 ```python
@@ -67,7 +67,7 @@ HYPERPARAM_GRID = {
 - **Final Training**: 50,000 timesteps
 - **Validation Steps**: 5,000 timesteps
 
-## 📈 Data Requirements
+## Data Requirements
 
 Expected CSV format with columns:
 - `date`: Trading date (used as index)
@@ -76,7 +76,7 @@ Expected CSV format with columns:
 - `GEX`: Gamma Exposure indicator
 - `VIX`: Volatility Index
 
-## 🏗️ Architecture Components
+## Architecture Components
 
 ### Trading Environment (`SimpleTradingEnv`)
 ```python
@@ -99,7 +99,7 @@ def calculate_complete_metrics(balance_history, price_data, benchmark_returns=No
     # Includes statistical significance testing
 ```
 
-## 📊 Output Structure
+## Output Structure
 
 ### Results Directory
 ```
@@ -117,7 +117,7 @@ results_COMPLETE_WITH_CLASSICAL_METHODS_2/
 - `denoising_effectiveness.csv`: Wavelet analysis
 - `statistical_significance.txt`: Significance testing
 
-## 🔬 Research Methodology
+## Research Methodology
 
 ### Temporal Data Splitting
 - **Training**: 60% (earliest data)
@@ -136,7 +136,7 @@ def simple_wavelet_denoise(series, wavelet):
 - Pairs: DIX+GEX, DIX+VIX, GEX+VIX  
 - Triple: DIX+GEX+VIX
 
-## 🎯 Key Innovations
+## Key Innovations
 
 1. **Reproducible Research**: Unique random seeds per experiment
 2. **No Data Leakage**: Strict temporal splitting
@@ -145,7 +145,7 @@ def simple_wavelet_denoise(series, wavelet):
 5. **Statistical Rigor**: Significance testing and confidence intervals
 6. **Advanced Architecture**: State-of-the-art neural feature extraction
 
-## 📋 Dependencies
+## Dependencies
 
 ```python
 # Core Libraries
@@ -159,14 +159,14 @@ stable-baselines3>=1.6.0
 scikit-learn>=1.0.0
 ```
 
-## 🚦 Usage
+## Usage
 
 1. **Prepare Data**: Ensure CSV file matches expected format
 2. **Configure Paths**: Update `file_path` and `results_dir`
 3. **Run Analysis**: Execute the complete pipeline
 4. **Review Results**: Check output directory for comprehensive results
 
-## 📊 Performance Metrics
+## Performance Metrics
 
 ### Trading Metrics
 - **Return Metrics**: Total Return, CAGR
